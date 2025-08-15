@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Page Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- Navbar -->
+    <header class="bg-gray-900 text-white fixed w-full z-50 shadow">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center py-4">
+
+            <!-- Left: Logo + Nav (Desktop) -->
+            <div class="flex items-center space-x-8">
+                <h1 class="text-2xl font-bold">MyBrand</h1>
+
+                <!-- Search for mobile -->
+                <div id="search-wrapper-mobile" class="md:hidden relative">
+                    <button id="search-btn-mobile" class="focus:outline-none">
+                        🔍
+                    </button>
+                    <div id="search-bar-mobile"
+                        class="hidden absolute left-0 top-full mt-2 bg-white text-black rounded-md overflow-hidden shadow-lg flex items-center">
+                        <input type="text" placeholder="Search..." class="p-2 outline-none">
+                        <button id="cancel-search-mobile" class="px-3 text-red-500">✖</button>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#services" class="hover:text-indigo-400 transition">Services</a>
+                    <a href="#about" class="hover:text-indigo-400 transition">About</a>
+                    <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+                </nav>
+            </div>
+
+            <!-- Right: Search + Schedule (Desktop) -->
+            <div class="hidden md:flex items-center space-x-4">
+                <!-- Search -->
+                <div id="search-wrapper" class="relative">
+                    <button id="search-btn" class="focus:outline-none">
+                        🔍
+                    </button>
+                    <div id="search-bar"
+                        class="hidden absolute right-0 top-0 bg-white text-black rounded-md overflow-hidden shadow-lg flex items-center">
+                        <input type="text" placeholder="Search..." class="p-2 outline-none">
+                        <button id="cancel-search" class="px-3 text-red-500">✖</button>
+                    </div>
+                </div>
+                <!-- Schedule button -->
+                <a href="#schedule" class="bg-indigo-500 px-4 py-2 rounded-lg hover:bg-indigo-600 transition">Schedule a
+                    Call</a>
+            </div>
+
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="white" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="max-h-0 overflow-hidden bg-gray-800 md:hidden transition-all duration-300 ease-out h-screen flex flex-col justify-content space-y-8">
+            <a href="#services" class="block px-6 py-3 hover:bg-gray-700">Services</a>
+            <a href="#offers" class="block px-6 py-3 hover:bg-gray-700">Offers</a>
+            <a href="#plugins" class="block px-6 py-3 hover:bg-gray-700">Plugins</a>
+            <a href="#about" class="block px-6 py-3 hover:bg-gray-700">About</a>
+            <a href="#contact" class="block px-6 py-3 hover:bg-gray-700">Contact</a>
+            <div class="px-6 py-3">
+                <a href="#schedule"
+                    class="bg-indigo-500 w-full block text-center px-4 py-2 rounded-lg hover:bg-indigo-600 transition">Schedule
+                    a Call</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-900 text-white py-28 px-6 text-center" data-aos="fade-up">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Proactive Digital Solutions</h1>
+        <p class="max-w-2xl mx-auto text-lg text-gray-300 mb-8">
+            Creating fast, secure, and visually striking websites to engage audiences and drive growth.
+        </p>
+        <a href="#services" class="bg-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
+            See What I Can Do
+        </a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-down">Services I Offer</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="bg-white rounded-xl shadow hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://source.unsplash.com/400x250/?technology,website" alt="Web Design"
+                    class="rounded-t-xl w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-3 text-indigo-600">Custom Web Design</h3>
+                    <p class="text-gray-600">Modern, responsive, and tailored websites that reflect your unique brand
+                        identity.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://source.unsplash.com/400x250/?speed,performance" alt="Optimization"
+                    class="rounded-t-xl w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-3 text-indigo-600">Performance Optimization</h3>
+                    <p class="text-gray-600">Lightning-fast websites that keep visitors engaged and improve SEO
+                        rankings.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://source.unsplash.com/400x250/?security,cyber" alt="Security"
+                    class="rounded-t-xl w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-3 text-indigo-600">Security Implementation</h3>
+                    <p class="text-gray-600">Best-in-class security practices to protect your business and your
+                        customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-indigo-50 py-20 px-6 text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-6">Why Work With Me?</h2>
+        <p class="max-w-3xl mx-auto text-gray-700 mb-6">
+            I blend creativity and technical expertise to deliver impactful solutions that clients can proudly showcase.
+            My focus is on results, reliability, and long-term value.
+        </p>
+        <blockquote class="italic text-gray-600 max-w-xl mx-auto">
+            "Working with him was a game changer. Fast, professional, and exceeded expectations!"
+        </blockquote>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 max-w-4xl mx-auto text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-6">Let’s Work Together</h2>
+        <p class="text-gray-700 mb-8">Got a project in mind? Let's bring it to life.</p>
+        <a href="mailto:you@example.com"
+            class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
+            Contact Me
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-200 py-8 text-center" data-aos="fade-in">
+        <p>© 2025 Your Name</p>
+        <div class="mt-2 space-x-4">
+            <a href="#" class="hover:underline">Privacy Policy</a>
+            <a href="#" class="hover:underline">Terms of Service</a>
+            <a href="#" class="hover:underline">About</a>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init( { duration: 800, once: true } );
+
+        // Mobile Menu Toggle
+            const menuBtn = document.getElementById( 'menu-btn' );
+            const mobileMenu = document.getElementById( 'mobile-menu' );
+            let menuOpen = false;
+
+            menuBtn.addEventListener( "click", () => {
+                menuOpen = !menuOpen;
+                // Animate hamburger to X
+                menuBtn.querySelector( "svg" ).classList.toggle( "rotate-90" );
+                menuBtn.querySelector( "path" ).setAttribute( "d", menuOpen
+                    ? "M6 18L18 6M6 6l12 12"  // X shape
+                    : "M4 6h16M4 12h16M4 18h16" // Hamburger
+                );
+                // Slide down mobile menu
+                setTimeout(() => {
+                    
+                
+                if ( menuOpen )
+                    {
+                        mobileMenu.classList.remove( 'max-h-0' );
+                        mobileMenu.classList.add( 'max-h-screen' ); // Full screen height
+                    } else
+                    {
+                        mobileMenu.classList.remove( 'max-h-screen' );
+                        mobileMenu.classList.add( 'max-h-0' );
+                    }
+                }, 300 );
+            } );
+
+            // Search toggle
+            const searchBtn = document.getElementById( "search-btn" );
+            const searchBar = document.getElementById( "search-bar" );
+            const cancelSearch = document.getElementById( "cancel-search" );
+
+            searchBtn.addEventListener( "click", () => {
+                searchBar.classList.remove( "hidden" );
+            } );
+
+            cancelSearch.addEventListener( "click", () => {
+                searchBar.classList.add( "hidden" );
+            } );
+
+    </script>
+</body>
+
+</html>
