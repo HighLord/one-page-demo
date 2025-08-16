@@ -1,0 +1,468 @@
+/* General body styles */
+body {
+    background-color: #f9fafb;
+    color: #111827;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/* Navbar container */
+header {
+    background-color: #111827;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar inner wrapper */
+.desktop {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.desktop>div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.desktop > div h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700; 
+}
+
+/* #search-wrapper-mobile */
+#search-wrapper-mobile {
+    display: block;
+    position: relative;
+}
+
+/* #search-btn-mobile */
+#search-btn-mobile {
+    outline: none;
+}
+
+/* #search-bar-mobile */
+#search-bar-mobile {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 0.5rem;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    align-items: center;
+}
+
+/* #search-bar-mobile input */
+#search-bar-mobile input {
+    padding: 0.5rem;
+    outline: none;
+}
+
+/* #cancel-search-mobile */
+#cancel-search-mobile {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    color: #ef4444;
+}
+
+.nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+    }
+    #menu-btn {
+        display: none;
+    }
+}
+
+.nav {
+    gap: 1.5rem;
+}
+
+.nav a {
+    transition: color 150ms;
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: rgb(129, 140, 248);
+}
+
+/* Search wrapper */
+.div{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .div {
+        display: flex;
+        align-items: center;
+        /* items-center */
+    }
+}
+
+.div {
+    gap: 1rem;
+    /* space-x-4 */
+}
+
+#search-wrapper {
+    position: relative;
+}
+
+/* Search button */
+#search-btn {
+    display: none;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#search-btn-mobile {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+}
+
+/* Search bar */
+#search-bar {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    color: black;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+    align-items: center;
+}
+
+#search-bar input {
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+}
+
+#cancel-search {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    color: rgb(239, 68, 68);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Schedule button */
+.schedule {
+    background-color: rgb(99, 102, 241);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 150ms;
+    color: white;
+    text-decoration: none;
+}
+.schedule:hover {
+    background-color: rgb(79, 70, 229);
+}
+
+#menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* SVG icon styling */
+#menu-btn svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 300ms;
+    fill: none;
+    stroke: white;
+}
+
+#menu-btn.open svg {
+    transform: rotate(90deg);
+}
+
+/* Mobile Menu Container */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #1f2937;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    transition: all 300ms ease-out;
+}
+
+/* Hide on medium and up */
+@media (max-width: 768px) {
+    #mobile-menu {
+        display: none;
+    }
+        .schedule {
+            display: none;
+        }
+}
+
+/* Mobile Menu Links */
+#mobile-menu a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+/* Hover background */
+#mobile-menu a:hover {
+    background-color: #374151;
+}
+
+/* Schedule Button inside menu */
+#mobile-menu .schedule-mobile {
+    background-color: #6366f1;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 200ms ease;
+}
+
+#mobile-menu .schedule-mobile:hover {
+    background-color: #4f46e5;
+}
+
+/* Hero section */
+.hero {
+    background-color: #111827;
+    color: white;
+    padding: 7rem 1.5rem;
+    text-align: center;
+}
+
+/* Heading */
+.hero h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Paragraph */
+.hero p {
+    max-width: 42rem;
+    margin: 0 auto 2rem auto;
+    font-size: 1.125rem;
+    color: #d1d5db;
+}
+
+/* Button */
+.hero .hero-btn {
+    background-color: #4f46e5;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    transition: background-color 200ms ease;
+}
+
+.hero .hero-btn:hover {
+    background-color: #4338ca;
+}
+
+/* Services Section */
+#services {
+    padding: 5rem 1.5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+/* Section Heading */
+#services h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Grid Layout */
+#services .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    #services .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Service Card */
+.service-card {
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 200ms ease;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* About Section */
+#about {
+    background-color: #eef2ff;
+    padding: 5rem 1.5rem;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+#about p {
+    max-width: 48rem;
+    margin: 0 auto 1.5rem auto;
+    color: #374151;
+}
+
+#about blockquote {
+    font-style: italic;
+    color: #4b5563;
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+#contact {
+    padding: 5rem 1.5rem;
+    max-width: 56rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+#contact p {
+    color: #374151;
+    margin-bottom: 2rem;
+}
+
+#contact .contact-btn {
+    background-color: #4f46e5;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+#contact .contact-btn:hover {
+    background-color: #4338ca;
+}
+
+/* Footer */
+footer {
+    background-color: #111827;
+    color: #e5e7eb;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .footer-links {
+    margin-top: 0.5rem;
+}
+
+footer .footer-links a {
+    margin: 0 0.5rem;
+    color: #e5e7eb;
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+.fa-search{
+    background-color: transparent;
+    width: 0px;
+    height: 0px;
+    font-size: 20px;
+    color: white;
+}
+
+/* Base: mobile-first */
+.responsive-img {
+    width: 100%;
+    /* takes full width of parent container */
+    height: 200px;
+    /* keeps aspect ratio */
+    max-height: 250px;
+    /* optional cap on mobile */
+    object-fit: cover;
+    /* crop image instead of stretching */
+    border-radius: 8px;
+    /* optional styling */
+}
+
+/* Desktop override */
+@media (min-width: 768px) {
+    .responsive-img {
+        width: 300px;
+        /* fixed size on larger screens */
+        height: 200px;
+    }
+}
