@@ -314,22 +314,20 @@ header {
     max-width: 35%;
 }
 .hero-image {
-    margin: 0 0em 0 0;
+    margin: 0 4em 0 0;
     max-width: 65%;
 }
 @media (max-width: 768px) {
     .hero{
         flex-direction: column;
         gap: 5rem;
-        galign-items: center;
-        ajustify-content: center;
     }
     .hero-content {
         margin: 0 2em 0 2em;
         max-width: 100%;
     }
     .hero-image {
-        margin: 0 3em 0 0;
+        margin: 0 2em 0 0;
         max-width: 100%;
     }
 }
@@ -384,7 +382,7 @@ header {
 #services .services-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -402,6 +400,13 @@ header {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: box-shadow 200ms ease;
     overflow: hidden;
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
 }
 
 .service-card:hover {
