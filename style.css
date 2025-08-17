@@ -291,6 +291,14 @@ header {
     color: white;
     padding: 7rem 1.5rem;
 }
+.hero-content {
+    max-width: 60%;
+}
+@media (max-width: 768px) {
+    .hero-content {
+        max-width: 100%;
+    }
+}
 
 /* Heading */
 .hero h1 {
