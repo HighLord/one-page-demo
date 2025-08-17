@@ -7,7 +7,7 @@ menuBtn.addEventListener( "click", () =>
 {
     menuOpen = !menuOpen;
     // Animate hamburger to X
-    menuBtn.querySelector( "svg" ).classList.toggle( "rotate-90" );
+    menuBtn.classList.toggle( "open" );
     menuBtn.querySelector( "path" ).setAttribute( "d", menuOpen
         ? "M6 18L18 6M6 6l12 12"  // X shape
         : "M4 6h16M4 12h16M4 18h16" // Hamburger
@@ -18,13 +18,12 @@ menuBtn.addEventListener( "click", () =>
 
 
         if ( menuOpen ) {
-            mobileMenu.classList.remove( 'max-h-0' );
-            mobileMenu.classList.add( 'max-h-screen' ); // Full screen height
+            mobileMenu.classList.add( 'open' );
         } else {
-            mobileMenu.classList.remove( 'max-h-screen' );
-            mobileMenu.classList.add( 'max-h-0' );
+            mobileMenu.classList.remove( 'open' );
         }
-    }, 300 );
+
+    }, 100 );
 } );
 
 // Search toggle
