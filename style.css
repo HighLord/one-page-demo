@@ -34,8 +34,8 @@ header {
 .logo{
     height: 2.5em;
 }
-.logo img {
-    height: 2.5em;
+.tranLogo {
+    height: 2.5em !important;
 }
 
 .desktop>div {
