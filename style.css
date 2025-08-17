@@ -293,6 +293,7 @@ header {
 }
 .hero-content {
     max-width: 60%;
+    padding: 0px 2em;
 }
 @media (max-width: 768px) {
     .hero-content {
