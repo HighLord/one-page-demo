@@ -32,12 +32,10 @@ header {
     padding-bottom: 1rem;
 }
 .logo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    height: 2.5em;
 }
 .logo img {
-    height: 50px;
+    height: 2.5em;
 }
 
 .desktop>div {
